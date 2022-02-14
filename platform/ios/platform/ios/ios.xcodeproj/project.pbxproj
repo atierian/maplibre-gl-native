@@ -291,6 +291,12 @@
 		8989B17D201A48EB0081CF59 /* MGLHeatmapStyleLayer.h in Headers */ = {isa = PBXBuildFile; fileRef = 8989B17A201A48EA0081CF59 /* MGLHeatmapStyleLayer.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		8989B17E201A48EB0081CF59 /* MGLHeatmapStyleLayer.mm in Sources */ = {isa = PBXBuildFile; fileRef = 8989B17B201A48EA0081CF59 /* MGLHeatmapStyleLayer.mm */; };
 		8989B17F201A48EB0081CF59 /* MGLHeatmapStyleLayer.mm in Sources */ = {isa = PBXBuildFile; fileRef = 8989B17B201A48EA0081CF59 /* MGLHeatmapStyleLayer.mm */; };
+		906C616D27BB14BD00F3F422 /* MGLMetalStyleLayer.mm in Sources */ = {isa = PBXBuildFile; fileRef = 906C616C27BB14B800F3F422 /* MGLMetalStyleLayer.mm */; };
+		906C616E27BB14BD00F3F422 /* MGLMetalStyleLayer.mm in Sources */ = {isa = PBXBuildFile; fileRef = 906C616C27BB14B800F3F422 /* MGLMetalStyleLayer.mm */; };
+		906C616F27BB14C100F3F422 /* MGLMetalStyleLayer.h in Headers */ = {isa = PBXBuildFile; fileRef = 906C616B27BB14B700F3F422 /* MGLMetalStyleLayer.h */; };
+		906C617027BB14C100F3F422 /* MGLMetalStyleLayer.h in Headers */ = {isa = PBXBuildFile; fileRef = 906C616B27BB14B700F3F422 /* MGLMetalStyleLayer.h */; };
+		906C617327BB172C00F3F422 /* MGLStyle_Private_Metal.h in Headers */ = {isa = PBXBuildFile; fileRef = 906C617227BB170B00F3F422 /* MGLStyle_Private_Metal.h */; };
+		906C617427BB172C00F3F422 /* MGLStyle_Private_Metal.h in Headers */ = {isa = PBXBuildFile; fileRef = 906C617227BB170B00F3F422 /* MGLStyle_Private_Metal.h */; };
 		920A3E5D1E6F995200C16EFC /* MGLSourceQueryTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 920A3E5C1E6F995200C16EFC /* MGLSourceQueryTests.m */; };
 		9221BAAD2069843A0054BDF4 /* MGLTilePyramidOfflineRegion_Private.h in Headers */ = {isa = PBXBuildFile; fileRef = 9221BAAC2069843A0054BDF4 /* MGLTilePyramidOfflineRegion_Private.h */; };
 		9221BAB020699F8A0054BDF4 /* MGLTilePyramidOfflineRegion_Private.h in Headers */ = {isa = PBXBuildFile; fileRef = 9221BAAC2069843A0054BDF4 /* MGLTilePyramidOfflineRegion_Private.h */; };
@@ -976,6 +982,10 @@
 		74CB5ED0219B286400102936 /* MGLSymbolStyleLayer_Private.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MGLSymbolStyleLayer_Private.h; sourceTree = "<group>"; };
 		8989B17A201A48EA0081CF59 /* MGLHeatmapStyleLayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MGLHeatmapStyleLayer.h; sourceTree = "<group>"; };
 		8989B17B201A48EA0081CF59 /* MGLHeatmapStyleLayer.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = MGLHeatmapStyleLayer.mm; sourceTree = "<group>"; };
+		906C616B27BB14B700F3F422 /* MGLMetalStyleLayer.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MGLMetalStyleLayer.h; sourceTree = "<group>"; };
+		906C616C27BB14B800F3F422 /* MGLMetalStyleLayer.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = MGLMetalStyleLayer.mm; sourceTree = "<group>"; };
+		906C617127BB168600F3F422 /* MGLMetalStyleLayer_Private.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MGLMetalStyleLayer_Private.h; sourceTree = "<group>"; };
+		906C617227BB170B00F3F422 /* MGLStyle_Private_Metal.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MGLStyle_Private_Metal.h; sourceTree = "<group>"; };
 		920A3E5C1E6F995200C16EFC /* MGLSourceQueryTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MGLSourceQueryTests.m; path = ../../darwin/test/MGLSourceQueryTests.m; sourceTree = "<group>"; };
 		9221BAAC2069843A0054BDF4 /* MGLTilePyramidOfflineRegion_Private.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MGLTilePyramidOfflineRegion_Private.h; sourceTree = "<group>"; };
 		927FBCFA1F4DAA8300F8BF1F /* MBXSnapshotsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MBXSnapshotsViewController.h; sourceTree = "<group>"; };
@@ -1500,6 +1510,7 @@
 		353933F01D3FB6BA003F57D7 /* Layers */ = {
 			isa = PBXGroup;
 			children = (
+				906C616A27BB12B600F3F422 /* Metal */,
 				74CB5ED0219B286400102936 /* MGLSymbolStyleLayer_Private.h */,
 				74CB5EC7219B285000102936 /* MGLLineStyleLayer_Private.h */,
 				74CB5EC8219B285000102936 /* MGLOpenGLStyleLayer_Private.h */,
@@ -1683,6 +1694,17 @@
 				4BAB4DA2264E6DCA00F015C1 /* MGLTileServerOptions.mm */,
 			);
 			name = Configuration;
+			sourceTree = "<group>";
+		};
+		906C616A27BB12B600F3F422 /* Metal */ = {
+			isa = PBXGroup;
+			children = (
+				906C617227BB170B00F3F422 /* MGLStyle_Private_Metal.h */,
+				906C616C27BB14B800F3F422 /* MGLMetalStyleLayer.mm */,
+				906C616B27BB14B700F3F422 /* MGLMetalStyleLayer.h */,
+				906C617127BB168600F3F422 /* MGLMetalStyleLayer_Private.h */,
+			);
+			name = Metal;
 			sourceTree = "<group>";
 		};
 		9604FC341F313A5E003EEA02 /* Fixtures */ = {
@@ -2306,6 +2328,7 @@
 				966FCF531F3C322400F2B6DE /* MGLUserLocationHeadingArrowLayer.h in Headers */,
 				DA27C24F1CBB4C11000B0ECD /* MGLSettings_Private.h in Headers */,
 				DA8847FC1CBAFA5100AB86E3 /* MGLStyle.h in Headers */,
+				906C616F27BB14C100F3F422 /* MGLMetalStyleLayer.h in Headers */,
 				DD9BE4F71EB263C50079A3AF /* UIViewController+MGLAdditions.h in Headers */,
 				DAF0D8131DFE0EC500B28378 /* MGLVectorTileSource_Private.h in Headers */,
 				354B83961D2E873E005D9406 /* MGLUserLocationAnnotationView.h in Headers */,
@@ -2348,6 +2371,7 @@
 				DA8847F41CBAFA5100AB86E3 /* MGLOfflinePack.h in Headers */,
 				DA88482E1CBAFA6200AB86E3 /* NSException+MGLAdditions.h in Headers */,
 				74CB5ED1219B286400102936 /* MGLSymbolStyleLayer_Private.h in Headers */,
+				906C617327BB172C00F3F422 /* MGLStyle_Private_Metal.h in Headers */,
 				9221BAAD2069843A0054BDF4 /* MGLTilePyramidOfflineRegion_Private.h in Headers */,
 				96F3F73C1F57124B003E2D2C /* MGLUserLocationHeadingIndicator.h in Headers */,
 				408AA8571DAEDA1700022900 /* NSDictionary+MGLAdditions.h in Headers */,
@@ -2467,6 +2491,7 @@
 				1F6A82A92138871900BA5B41 /* MGLLoggingConfiguration_Private.h in Headers */,
 				DABFB8661CBE99E500D62B32 /* MGLPointAnnotation.h in Headers */,
 				96E6145A22CC169000109F14 /* MGLCompassButton.h in Headers */,
+				906C617027BB14C100F3F422 /* MGLMetalStyleLayer.h in Headers */,
 				96E516E42000560B00A02306 /* MGLComputedShapeSource_Private.h in Headers */,
 				96E516E92000560B00A02306 /* MGLAnnotationImage_Private.h in Headers */,
 				96E516E52000560B00A02306 /* MGLOfflinePack_Private.h in Headers */,
@@ -2509,6 +2534,7 @@
 				1FC4817F2098CD80000D09B4 /* NSPredicate+MGLPrivateAdditions.h in Headers */,
 				DABFB8671CBE99E500D62B32 /* MGLPolygon.h in Headers */,
 				404C26E81D89C55D000AA13D /* MGLTileSource_Private.h in Headers */,
+				906C617427BB172C00F3F422 /* MGLStyle_Private_Metal.h in Headers */,
 				74CB5EBC219B280400102936 /* MGLFillExtrusionStyleLayer_Private.h in Headers */,
 				1F7454931ECBB43F00021D39 /* MGLLight.h in Headers */,
 				DAAF722C1DA903C700312FA4 /* MGLStyleValue.h in Headers */,
@@ -2775,50 +2801,56 @@
 				TargetAttributes = {
 					16376B061FFD9DAF0000563E = {
 						CreatedOnToolsVersion = 9.2;
+						DevelopmentTeam = G3Q4R66M4R;
 						LastSwiftMigration = 0940;
 						ProvisioningStyle = Automatic;
 						TestTargetID = DA1DC9491CB6C1C2006E619F;
 					};
 					16376B2E1FFDB4B40000563E = {
 						CreatedOnToolsVersion = 9.2;
-						DevelopmentTeam = GJZR2MEM28;
+						DevelopmentTeam = G3Q4R66M4R;
 						ProvisioningStyle = Automatic;
 					};
 					D717FE7625F1955A0054E06E = {
 						CreatedOnToolsVersion = 12.4;
+						DevelopmentTeam = G3Q4R66M4R;
 						ProvisioningStyle = Automatic;
 						TestTargetID = DA1DC9491CB6C1C2006E619F;
 					};
 					D7E7CE8425F2EF6A00C175FC = {
 						CreatedOnToolsVersion = 12.4;
+						DevelopmentTeam = G3Q4R66M4R;
 						ProvisioningStyle = Automatic;
 						TestTargetID = DABCABA71CB80692000A7C39;
 					};
 					DA1DC9491CB6C1C2006E619F = {
 						CreatedOnToolsVersion = 7.3;
-						DevelopmentTeam = KBDAWM7T4E;
+						DevelopmentTeam = G3Q4R66M4R;
 						LastSwiftMigration = 0820;
-						ProvisioningStyle = Manual;
+						ProvisioningStyle = Automatic;
 					};
 					DA2E88501CC036F400F24E7B = {
 						CreatedOnToolsVersion = 7.3;
-						DevelopmentTeam = V6F7X5J9Y7;
+						DevelopmentTeam = G3Q4R66M4R;
 						LastSwiftMigration = 1010;
 					};
 					DA8847D11CBAF91600AB86E3 = {
 						CreatedOnToolsVersion = 7.3;
+						DevelopmentTeam = G3Q4R66M4R;
 						LastSwiftMigration = 0820;
+						ProvisioningStyle = Automatic;
 					};
 					DA8933D41CCD306400E68420 = {
 						CreatedOnToolsVersion = 7.3;
+						DevelopmentTeam = G3Q4R66M4R;
 					};
 					DAA4E4121CBB71D400178DFB = {
 						CreatedOnToolsVersion = 7.3;
 					};
 					DABCABA71CB80692000A7C39 = {
 						CreatedOnToolsVersion = 7.3;
-						DevelopmentTeam = KBDAWM7T4E;
-						ProvisioningStyle = Manual;
+						DevelopmentTeam = G3Q4R66M4R;
+						ProvisioningStyle = Automatic;
 					};
 				};
 			};
@@ -3187,6 +3219,7 @@
 				DA6408DD1DA4E7D300908C90 /* MGLVectorStyleLayer.mm in Sources */,
 				3566C7681D4A77BA008152BC /* MGLShapeSource.mm in Sources */,
 				967C864D210A9D3C004DF794 /* UIDevice+MGLAdditions.m in Sources */,
+				906C616D27BB14BD00F3F422 /* MGLMetalStyleLayer.mm in Sources */,
 				400533021DB0862B0069F638 /* NSArray+MGLAdditions.mm in Sources */,
 				6F018BAE220031B8003E7269 /* UIView+MGLAdditions.m in Sources */,
 				96036A03200565C700510F3D /* NSOrthography+MGLAdditions.m in Sources */,
@@ -3286,6 +3319,7 @@
 				3566C7691D4A77BA008152BC /* MGLShapeSource.mm in Sources */,
 				400533031DB086490069F638 /* NSArray+MGLAdditions.mm in Sources */,
 				35136D431D42274500C20EFD /* MGLRasterStyleLayer.mm in Sources */,
+				906C616E27BB14BD00F3F422 /* MGLMetalStyleLayer.mm in Sources */,
 				967C864E210A9D3C004DF794 /* UIDevice+MGLAdditions.m in Sources */,
 				96036A04200565C700510F3D /* NSOrthography+MGLAdditions.m in Sources */,
 				6F018BB1220031C1003E7269 /* UIView+MGLAdditions.m in Sources */,
@@ -3596,6 +3630,7 @@
 				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = G3Q4R66M4R;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				INFOPLIST_FILE = "Integration Tests/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
@@ -3626,6 +3661,7 @@
 				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = G3Q4R66M4R;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				INFOPLIST_FILE = "Integration Tests/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
@@ -3654,7 +3690,7 @@
 				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = GJZR2MEM28;
+				DEVELOPMENT_TEAM = G3Q4R66M4R;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				INFOPLIST_FILE = "Integration Test Harness/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -3680,7 +3716,7 @@
 				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = GJZR2MEM28;
+				DEVELOPMENT_TEAM = G3Q4R66M4R;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				INFOPLIST_FILE = "Integration Test Harness/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -3721,13 +3757,14 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ANALYZER_LOCALIZABILITY_EMPTY_CONTEXT = NO;
 				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = NO;
-				CODE_SIGN_STYLE = Manual;
-				DEVELOPMENT_TEAM = KBDAWM7T4E;
+				CODE_SIGN_IDENTITY = "Apple Development";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = G3Q4R66M4R;
 				INFOPLIST_FILE = app/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = org.maplibre.maplibregl;
 				PRODUCT_NAME = "MapLibre GL";
-				PROVISIONING_PROFILE_SPECIFIER = "MapLibre GL TestApp Development";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 			};
 			name = RelWithDebInfo;
 		};
@@ -3737,8 +3774,9 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_CXX_LANGUAGE_STANDARD = "c++14";
 				CLANG_CXX_LIBRARY = "libc++";
-				CODE_SIGN_STYLE = Manual;
-				DEVELOPMENT_TEAM = KBDAWM7T4E;
+				CODE_SIGN_IDENTITY = "Apple Development";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = G3Q4R66M4R;
 				HEADER_SEARCH_PATHS = (
 					"$(PROJECT_DIR)/../../../../include",
 					"$(PROJECT_DIR)/../../../default/include",
@@ -3759,7 +3797,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = org.maplibre.bench;
 				PRODUCT_NAME = "Bench GL";
-				PROVISIONING_PROFILE_SPECIFIER = "MapLibre GL Bench Development";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 			};
 			name = RelWithDebInfo;
 		};
@@ -3768,8 +3806,12 @@
 			baseConfigurationReference = CAE5AE2B2389FBF000E4A5A1 /* ios.xcconfig */;
 			buildSettings = {
 				BITCODE_GENERATION_MODE = bitcode;
+				CODE_SIGN_IDENTITY = "Apple Development";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "Apple Development";
+				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = G3Q4R66M4R;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 15256;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
@@ -3780,6 +3822,8 @@
 				LLVM_LTO = YES;
 				PRODUCT_BUNDLE_IDENTIFIER = com.mapbox.Mapbox;
 				PRODUCT_NAME = Mapbox;
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				"PROVISIONING_PROFILE_SPECIFIER[sdk=macosx*]" = "";
 				SKIP_INSTALL = YES;
 				VERSION_INFO_PREFIX = "__attribute__((visibility (\"default\"))) ";
 			};
@@ -3828,6 +3872,7 @@
 		96AF1AA821B615A3007CB696 /* RelWithDebInfo */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				DEVELOPMENT_TEAM = G3Q4R66M4R;
 				INFOPLIST_FILE = "framework/Info-static.plist";
 				PRODUCT_BUNDLE_IDENTIFIER = com.mapbox.Mapbox;
 				PRODUCT_NAME = Mapbox;
@@ -3842,7 +3887,7 @@
 			buildSettings = {
 				CLANG_ENABLE_MODULES = YES;
 				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "Apple Development";
-				DEVELOPMENT_TEAM = V6F7X5J9Y7;
+				DEVELOPMENT_TEAM = G3Q4R66M4R;
 				INFOPLIST_FILE = test/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				OTHER_CFLAGS = "-fvisibility=hidden";
@@ -3881,6 +3926,7 @@
 				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = G3Q4R66M4R;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				INFOPLIST_FILE = "Integration Tests/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
@@ -3909,7 +3955,7 @@
 				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = GJZR2MEM28;
+				DEVELOPMENT_TEAM = G3Q4R66M4R;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				INFOPLIST_FILE = "Integration Test Harness/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -3952,6 +3998,7 @@
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEVELOPMENT_TEAM = G3Q4R66M4R;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				GCC_DYNAMIC_NO_PIC = NO;
@@ -4009,6 +4056,7 @@
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = G3Q4R66M4R;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				GCC_NO_COMMON_BLOCKS = YES;
@@ -4062,6 +4110,7 @@
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = G3Q4R66M4R;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				GCC_NO_COMMON_BLOCKS = YES;
@@ -4116,6 +4165,7 @@
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEVELOPMENT_TEAM = G3Q4R66M4R;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				GCC_DYNAMIC_NO_PIC = NO;
@@ -4173,6 +4223,7 @@
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = G3Q4R66M4R;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				GCC_NO_COMMON_BLOCKS = YES;
@@ -4226,6 +4277,7 @@
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = G3Q4R66M4R;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				GCC_NO_COMMON_BLOCKS = YES;
@@ -4304,13 +4356,14 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ANALYZER_LOCALIZABILITY_EMPTY_CONTEXT = NO;
 				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = NO;
-				CODE_SIGN_STYLE = Manual;
-				DEVELOPMENT_TEAM = KBDAWM7T4E;
+				CODE_SIGN_IDENTITY = "Apple Development";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = G3Q4R66M4R;
 				INFOPLIST_FILE = app/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = org.maplibre.maplibregl;
 				PRODUCT_NAME = "MapLibre GL";
-				PROVISIONING_PROFILE_SPECIFIER = "MapLibre GL TestApp Development";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 			};
 			name = Debug;
 		};
@@ -4321,13 +4374,14 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ANALYZER_LOCALIZABILITY_EMPTY_CONTEXT = NO;
 				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = NO;
-				CODE_SIGN_STYLE = Manual;
-				DEVELOPMENT_TEAM = KBDAWM7T4E;
+				CODE_SIGN_IDENTITY = "Apple Development";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = G3Q4R66M4R;
 				INFOPLIST_FILE = app/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = org.maplibre.maplibregl;
 				PRODUCT_NAME = "MapLibre GL";
-				PROVISIONING_PROFILE_SPECIFIER = "MapLibre GL TestApp Development";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 			};
 			name = Release;
 		};
@@ -4337,7 +4391,7 @@
 			buildSettings = {
 				CLANG_ENABLE_MODULES = YES;
 				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "Apple Development";
-				DEVELOPMENT_TEAM = V6F7X5J9Y7;
+				DEVELOPMENT_TEAM = G3Q4R66M4R;
 				INFOPLIST_FILE = test/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				OTHER_CFLAGS = "-fvisibility=hidden";
@@ -4366,7 +4420,7 @@
 			buildSettings = {
 				CLANG_ENABLE_MODULES = YES;
 				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "Apple Development";
-				DEVELOPMENT_TEAM = V6F7X5J9Y7;
+				DEVELOPMENT_TEAM = G3Q4R66M4R;
 				INFOPLIST_FILE = test/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				OTHER_CFLAGS = "-fvisibility=hidden";
@@ -4393,8 +4447,12 @@
 			baseConfigurationReference = CAE5AE2B2389FBF000E4A5A1 /* ios.xcconfig */;
 			buildSettings = {
 				BITCODE_GENERATION_MODE = bitcode;
+				CODE_SIGN_IDENTITY = "Apple Development";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "Apple Development";
+				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = G3Q4R66M4R;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 15256;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
@@ -4403,6 +4461,8 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.mapbox.Mapbox;
 				PRODUCT_NAME = Mapbox;
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				"PROVISIONING_PROFILE_SPECIFIER[sdk=macosx*]" = "";
 				SKIP_INSTALL = YES;
 				VERSION_INFO_PREFIX = "__attribute__((visibility (\"default\"))) ";
 			};
@@ -4413,9 +4473,13 @@
 			baseConfigurationReference = CAE5AE2B2389FBF000E4A5A1 /* ios.xcconfig */;
 			buildSettings = {
 				BITCODE_GENERATION_MODE = bitcode;
+				CODE_SIGN_IDENTITY = "Apple Development";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "Apple Development";
+				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
 				DEPLOYMENT_POSTPROCESSING = YES;
+				DEVELOPMENT_TEAM = G3Q4R66M4R;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 15256;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
@@ -4426,6 +4490,8 @@
 				LLVM_LTO = YES;
 				PRODUCT_BUNDLE_IDENTIFIER = com.mapbox.Mapbox;
 				PRODUCT_NAME = Mapbox;
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				"PROVISIONING_PROFILE_SPECIFIER[sdk=macosx*]" = "";
 				SKIP_INSTALL = YES;
 				STRIP_STYLE = "non-global";
 				VERSION_INFO_PREFIX = "__attribute__((visibility (\"default\"))) ";
@@ -4435,6 +4501,7 @@
 		DA8933D91CCD306400E68420 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				DEVELOPMENT_TEAM = G3Q4R66M4R;
 				INFOPLIST_FILE = "framework/Info-static.plist";
 				PRODUCT_BUNDLE_IDENTIFIER = com.mapbox.Mapbox;
 				PRODUCT_NAME = Mapbox;
@@ -4446,6 +4513,7 @@
 		DA8933DA1CCD306400E68420 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				DEVELOPMENT_TEAM = G3Q4R66M4R;
 				INFOPLIST_FILE = "framework/Info-static.plist";
 				PRODUCT_BUNDLE_IDENTIFIER = com.mapbox.Mapbox;
 				PRODUCT_NAME = Mapbox;
@@ -4541,8 +4609,9 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_CXX_LANGUAGE_STANDARD = "c++14";
 				CLANG_CXX_LIBRARY = "libc++";
-				CODE_SIGN_STYLE = Manual;
-				DEVELOPMENT_TEAM = KBDAWM7T4E;
+				CODE_SIGN_IDENTITY = "Apple Development";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = G3Q4R66M4R;
 				HEADER_SEARCH_PATHS = (
 					"$(PROJECT_DIR)/../../../../include",
 					"$(PROJECT_DIR)/../../../default/include",
@@ -4563,7 +4632,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = org.maplibre.bench;
 				PRODUCT_NAME = "Bench GL";
-				PROVISIONING_PROFILE_SPECIFIER = "MapLibre GL Bench Development";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 			};
 			name = Debug;
 		};
@@ -4573,8 +4642,9 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_CXX_LANGUAGE_STANDARD = "c++14";
 				CLANG_CXX_LIBRARY = "libc++";
-				CODE_SIGN_STYLE = Manual;
-				DEVELOPMENT_TEAM = KBDAWM7T4E;
+				CODE_SIGN_IDENTITY = "Apple Development";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = G3Q4R66M4R;
 				HEADER_SEARCH_PATHS = (
 					"$(PROJECT_DIR)/../../../../include",
 					"$(PROJECT_DIR)/../../../default/include",
@@ -4595,7 +4665,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = org.maplibre.bench;
 				PRODUCT_NAME = "Bench GL";
-				PROVISIONING_PROFILE_SPECIFIER = "MapLibre GL Bench Development";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 			};
 			name = Release;
 		};
