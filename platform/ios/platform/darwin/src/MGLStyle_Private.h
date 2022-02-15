@@ -13,7 +13,8 @@ namespace mbgl {
 
 @class MGLAttributionInfo;
 @class MGLMapView;
-@class MGLOpenGLStyleLayer;
+//@class MGLOpenGLStyleLayer;
+@class MGLMetalStyleLayer;
 @class MGLVectorTileSource;
 @class MGLVectorStyleLayer;
 
@@ -25,7 +26,7 @@ namespace mbgl {
 @property (nonatomic, readonly) mbgl::style::Style *rawStyle;
 
 - (nullable NSArray<MGLAttributionInfo *> *)attributionInfosWithFontSize:(CGFloat)fontSize linkColor:(nullable MGLColor *)linkColor;
-@property (nonatomic, readonly, strong) NSMutableDictionary<NSString *, MGLOpenGLStyleLayer *> *openGLLayers;
+@property (nonatomic, readonly, strong) NSMutableDictionary<NSString *, MGLMetalStyleLayer *> *openGLLayers;
 - (void)setStyleClasses:(NSArray<NSString *> *)appliedClasses transitionDuration:(NSTimeInterval)transitionDuration;
 
 @end

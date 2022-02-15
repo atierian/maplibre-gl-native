@@ -17,7 +17,8 @@
 
 // This test does not strictly need to be in this test file/target. Including here for convenience.
 - (void)testOpenGLLayerDoesNotLeakWhenCreatedAndDestroyedWithoutAddingToStyle {
-    MGLOpenGLStyleLayer *layer = [[MGLOpenGLStyleLayer alloc] initWithIdentifier:@"gl-layer"];
+    MGLOpen
+    GLStyleLayer *layer = [[MGLOpenGLStyleLayer alloc] initWithIdentifier:@"gl-layer"];
     __weak id weakLayer = layer;
     layer = nil;
 

@@ -12,7 +12,8 @@
 #import "MGLHillshadeStyleLayer.h"
 #import "MGLRasterStyleLayer.h"
 #import "MGLBackgroundStyleLayer.h"
-#import "MGLOpenGLStyleLayer.h"
+//#import "MGLOpenGLStyleLayer.h"
+#import "MGLMetalStyleLayer.h"
 #import "MGLStyleLayerManager.h"
 
 #import "MGLSource.h"
@@ -79,7 +80,7 @@ const MGLExceptionName MGLRedundantSourceIdentifierException = @"MGLRedundantSou
 @property (nonatomic, readonly, weak) id <MGLStylable> stylable;
 @property (nonatomic, readonly) mbgl::style::Style *rawStyle;
 @property (readonly, copy, nullable) NSURL *URL;
-@property (nonatomic, readwrite, strong) NSMutableDictionary<NSString *, MGLOpenGLStyleLayer *> *openGLLayers;
+@property (nonatomic, readwrite, strong) NSMutableDictionary<NSString *, MGLMetalStyleLayer *> *openGLLayers;
 @property (nonatomic) NSMutableDictionary<NSString *, NSDictionary<NSObject *, MGLTextLanguage *> *> *localizedLayersByIdentifier;
 
 @end

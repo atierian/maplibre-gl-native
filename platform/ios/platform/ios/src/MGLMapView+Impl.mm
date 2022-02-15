@@ -1,10 +1,11 @@
 #import "MGLMapView+Impl.h"
-#import "MGLMapView+OpenGL.h"
+//#import "MGLMapView+OpenGL.h"
+#import "MGLMapView+Metal.h"
 #import "MGLStyle_Private.h"
 #import "NSBundle+MGLAdditions.h"
 
 std::unique_ptr<MGLMapViewImpl> MGLMapViewImpl::Create(MGLMapView* nativeView) {
-    return std::make_unique<MGLMapViewOpenGLImpl>(nativeView);
+    return std::make_unique<MGLMapViewMetalImpl>(nativeView);
 }
 
 MGLMapViewImpl::MGLMapViewImpl(MGLMapView* nativeView_) : mapView(nativeView_) {

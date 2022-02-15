@@ -17,10 +17,10 @@ public:
 
     virtual mbgl::gfx::RendererBackend& getRendererBackend() = 0;
 
-    // Returns a handle to the OpenGL context object if this view is rendered with OpenGL.
-    virtual EAGLContext* getEAGLContext() {
-        return nullptr;
-    }
+//    // Returns a handle to the OpenGL context object if this view is rendered with OpenGL.
+//    virtual EAGLContext* getEAGLContext() {
+//        return nullptr;
+//    }
 
     // Gets called when the opaqueness of the view changes.
     virtual void setOpaque(bool) = 0;
@@ -46,7 +46,7 @@ public:
     // called before the application goes to the background. The resulting image is used as a place
     // holder instead of the regular view. This allows us to drop the framebuffers associated with
     // the rendering context and reduce memory while in the background.
-    virtual UIImage* snapshot() = 0;
+//    virtual UIImage* snapshot() = 0;
 
     // Called when UIView's layout has changed.
     virtual void layoutChanged() {};

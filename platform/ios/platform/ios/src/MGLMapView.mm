@@ -1774,9 +1774,9 @@ public:
 
 #pragma mark - GL / display link wake/sleep
 
-- (EAGLContext *)context {
-    return _mbglView->getEAGLContext();
-}
+//- (EAGLContext *)context {
+//    return _mbglView->getEAGLContext();
+//}
 
 - (BOOL)supportsBackgroundRendering
 {
@@ -7203,8 +7203,8 @@ static void *windowScreenContext = &windowScreenContext;
 
     if (lastSnapshotTime == 0.0 || (now - lastSnapshotTime > MGLBackgroundSnapshotImageInterval)) {
         MGLLogDebug(@"Taking snapshot");
-        self.lastSnapshotImage = _mbglView->snapshot();
-        lastSnapshotTime = now;
+//        self.lastSnapshotImage = _mbglView->snapshot();
+//        lastSnapshotTime = now;
     }
 }
 

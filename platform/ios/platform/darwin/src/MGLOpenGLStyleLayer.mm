@@ -87,9 +87,9 @@ class MGLOpenGLLayerHost;
 
 #pragma mark - Adding to and removing from a map view
 - (void)addToStyle:(MGLStyle *)style belowLayer:(MGLStyleLayer *)otherLayer {
-    self.style = style;
-    self.style.openGLLayers[self.identifier] = self;
-    [super addToStyle:style belowLayer:otherLayer];
+//    self.style = style;
+//    self.style.openGLLayers[self.identifier] = self;
+//    [super addToStyle:style belowLayer:otherLayer];
 }
 
 - (void)removeFromStyle:(MGLStyle *)style {
@@ -150,9 +150,9 @@ class MGLOpenGLLayerHost;
  @param mapView The map view to which the layer draws.
  @param context A context structure with information defining the frame to draw.
  */
-- (void)drawInMapView:(MGLMapView *)mapView withContext:(MGLStyleLayerDrawingContext)context {
+//- (void)drawInMapView:(MGLMapView *)mapView withContext:(MGLStyleLayerDrawingContext)context {
 
-}
+//}
 
 /**
  Forces the map view associated with this style to redraw the receiving layer,
@@ -183,18 +183,18 @@ public:
     void render(const mbgl::style::CustomLayerRenderParameters &params) {
         if(!layer) return;
 
-        MGLStyleLayerDrawingContext drawingContext = {
-            .size = CGSizeMake(params.width, params.height),
-            .centerCoordinate = CLLocationCoordinate2DMake(params.latitude, params.longitude),
-            .zoomLevel = params.zoom,
-            .direction = mbgl::util::wrap(params.bearing, 0., 360.),
-            .pitch = static_cast<CGFloat>(params.pitch),
-            .fieldOfView = static_cast<CGFloat>(params.fieldOfView),
-            .projectionMatrix = MGLMatrix4Make(params.projectionMatrix)
-        };
-        if (layer.mapView) {
-            [layer drawInMapView:layer.mapView withContext:drawingContext];
-        }
+//        MGLStyleLayerDrawingContext drawingContext = {
+//            .size = CGSizeMake(params.width, params.height),
+//            .centerCoordinate = CLLocationCoordinate2DMake(params.latitude, params.longitude),
+//            .zoomLevel = params.zoom,
+//            .direction = mbgl::util::wrap(params.bearing, 0., 360.),
+//            .pitch = static_cast<CGFloat>(params.pitch),
+//            .fieldOfView = static_cast<CGFloat>(params.fieldOfView),
+//            .projectionMatrix = MGLMatrix4Make(params.projectionMatrix)
+//        };
+//        if (layer.mapView) {
+//            [layer drawInMapView:layer.mapView withContext:drawingContext];
+//        }
     }
 
     void contextLost() {}

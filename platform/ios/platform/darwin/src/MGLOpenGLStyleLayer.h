@@ -12,15 +12,15 @@ NS_ASSUME_NONNULL_BEGIN
 @class MGLMapView;
 @class MGLStyle;
 
-typedef struct MGLStyleLayerDrawingContext {
-    CGSize size;
-    CLLocationCoordinate2D centerCoordinate;
-    double zoomLevel;
-    CLLocationDirection direction;
-    CGFloat pitch;
-    CGFloat fieldOfView;
-    MGLMatrix4 projectionMatrix;
-} MGLStyleLayerDrawingContext;
+//typedef struct MGLStyleLayerDrawingContext {
+//    CGSize size;
+//    CLLocationCoordinate2D centerCoordinate;
+//    double zoomLevel;
+//    CLLocationDirection direction;
+//    CGFloat pitch;
+//    CGFloat fieldOfView;
+//    MGLMatrix4 projectionMatrix;
+//} MGLStyleLayerDrawingContext;
 
 MGL_EXPORT
 @interface MGLOpenGLStyleLayer : MGLStyleLayer
@@ -42,7 +42,7 @@ MGL_EXPORT
 
 - (void)willMoveFromMapView:(MGLMapView *)mapView;
 
-- (void)drawInMapView:(MGLMapView *)mapView withContext:(MGLStyleLayerDrawingContext)context;
+//- (void)drawInMapView:(MGLMapView *)mapView withContext:(MGLStyleLayerDrawingContext)context;
 
 - (void)setNeedsDisplay;
 
